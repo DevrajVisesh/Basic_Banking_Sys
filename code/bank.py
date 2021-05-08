@@ -10,9 +10,9 @@ conn = sqlite3.connect('bankdatabase.db')
 c = conn.cursor()
 
 # c.execute('''CREATE TABLE customer1
-#                (sno INTEGER,name TEXT,email TEXT,transactionid INTEGER,current REAL)''')
+#               (sno INTEGER,name TEXT,email TEXT,transactionid INTEGER,current REAL)''')
 # c.execute('''CREATE TABLE transferhistorys
-#                (yourid INTEGER  , othersid INTEGER , amount real)''')
+#               (yourid INTEGER  , othersid INTEGER , amount real)''')
 # conn.commit()
 # conn.close()
 
