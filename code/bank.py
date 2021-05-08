@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask_cors import CORS
 import sqlite3
 import json
+import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -23,6 +24,12 @@ app = Flask(__name__, static_url_path='', static_folder='templates/')
 def serve_frontend():
     print("Helooooooo ")
     return render_template('index.html')
+
+
+def index():
+    r = requests.get('http://httpbin.org/status/418')
+    print(r.text)
+    return HttpResponse('<pre>' + r.text + '</pre>')
 
 
 @app.route('/insertdb/')
