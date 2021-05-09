@@ -26,10 +26,10 @@ def serve_frontend():
     return render_template('index.html')
 
 
-def index():
-    r = requests.get('http://httpbin.org/status/418')
-    print(r.text)
-    return HttpResponse('<pre>' + r.text + '</pre>')
+# def index():
+#    r = requests.get('http://httpbin.org/status/418')
+#    print(r.text)
+#    return HttpResponse('<pre>' + r.text + '</pre>')
 
 
 @app.route('/insertdb/')
